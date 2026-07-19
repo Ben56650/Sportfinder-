@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "Sport Finder",
+    "slug": "sport-finder",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": { "backgroundColor": "#5B4FE9" },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Sport Finder utilise l'appareil photo pour analyser tes plats.",
+        "NSPhotoLibraryUsageDescription": "Sport Finder utilise ta galerie pour analyser tes plats."
+      }
+    },
+    "android": {
+      "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE"]
+    },
+    "web": { "bundler": "metro" },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Sport Finder utilise ta position pour suivre tes courses en GPS."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Sport Finder utilise ta galerie pour analyser tes plats.",
+          "cameraPermission": "Sport Finder utilise l'appareil photo pour analyser tes plats."
+        }
+      ]
+    ]
+  }
+}
