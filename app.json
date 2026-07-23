@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "NutriSport",
+    "slug": "nutrisport",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": { "backgroundColor": "#5B4FE9" },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "NutriSport utilise l'appareil photo pour scanner les codes-barres alimentaires et prendre ta photo de profil.",
+        "NSPhotoLibraryUsageDescription": "NutriSport utilise ta galerie pour choisir une photo de profil."
+      }
+    },
+    "android": {
+      "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE"],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#5B4FE9"
+      }
+    },
+    "web": { "bundler": "metro", "favicon": "./assets/favicon.png" },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "NutriSport utilise ta position pour suivre tes séances sportives et trouver les terrains les plus proches."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "NutriSport utilise ta galerie pour choisir une photo de profil.",
+          "cameraPermission": "NutriSport utilise l'appareil photo pour scanner les codes-barres et prendre ta photo de profil."
+        }
+      ]
+    ]
+  }
+}
